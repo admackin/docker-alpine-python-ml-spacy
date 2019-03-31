@@ -5,7 +5,7 @@ RUN apk add --update bash
 
 RUN apk add --no-cache --virtual .build-deps \
   build-base python3-dev \
-    && pip install --no-cache-dir spacy \
+    && pip install --no-cache-dir spacy==2.1 \
     && find /usr/local \
         \( -type d -a -name test -o -name tests \) \
         -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) \
